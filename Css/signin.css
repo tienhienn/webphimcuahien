@@ -1,0 +1,230 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-padding-top: 32px;
+  /* 2rem */
+  scroll-behavior: smooth;
+}
+body {
+  color: white;
+  background: black;
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  padding: 72px 0 24px;
+  /* 4.5rem 1.5rem */
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  transition: 0.5s;
+  background-color: black;
+  border-bottom: 1px solid white;
+}
+.logo {
+  font-size: 17.6px;
+  /* 1.1rem */
+  font-weight: 600;
+  display: flex;
+  color: white;
+  align-items: center;
+  column-gap: 8px;
+}
+.logo i {
+  font-size: 24px;
+  color: white;
+}
+.navbar {
+  display: flex;
+  column-gap: 80px;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+.navbar a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.4s all linear;
+}
+.navbar a:hover::after {
+  width: 100%;
+}
+
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 100001;
+  display: none;
+}
+button {
+  margin-left: 10px;
+  padding: 11.2px;
+  width: 100px;
+  border-radius: 8px;
+  font-weight: 400;
+  border: none;
+  background-color: red;
+}
+button a {
+  font-size: 15px;
+  color: white;
+}
+button:hover {
+  background-color: rgb(224, 78, 67);
+}
+#form-signin {
+  margin: 50px;
+}
+.wrapper {
+  width: 420px;
+  background: black;
+  color: white;
+  border: 2px solid rgb(116, 116, 116);
+  border-radius: 50px;
+}
+.wrapper h1 {
+  text-align: center;
+  font-size: 36px;
+}
+.wrapper .form-group {
+  width: 100%;
+  height: 50px;
+  background: black;
+  margin: 30px 0;
+  position: relative;
+}
+.wrapper .checkbox {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin: -15px 0 15px;
+}
+.checkbox input {
+  accent-color: white;
+  margin-right: 5px;
+}
+.checkbox a {
+  color: white;
+  font-weight: bold;
+}
+.checkbox a:hover {
+  color: rgb(235, 129, 129);
+}
+.form-group input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  border: 2px solid rgb(116, 116, 116);
+  border-radius: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 20px 45px 20px 20px;
+}
+.form-group input::placeholder {
+  color: white;
+}
+.form-group i {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 20px;
+}
+.form-submit {
+  background: white;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border: 2px solid rgb(116, 116, 116);
+  border-radius: 40px;
+  font-size: 20px;
+  color: black;
+}
+.no {
+  text-align: center;
+  padding-top: 15px;
+}
+.no a {
+  color: white;
+  font-weight: bold;
+}
+.no a:hover {
+  color: rgb(235, 129, 129);
+}
+@media (max-width: 1440px) {
+  .home-text {
+    padding: 0 100px;
+  }
+  .sign {
+    display: flex;
+  }
+}
+@media (max-width: 1024px) {
+  header {
+    padding: 12px 5%;
+  }
+  .sign {
+    display: flex;
+  }
+  .navbar {
+    column-gap: 50px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 12px 5%;
+  }
+  #menu-icon {
+    display: initial;
+  }
+  #signin {
+    display: none;
+  }
+  #form-signin {
+    margin: 50px 20px;
+  }
+  .navbar {
+    position: absolute;
+    top: -570px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    row-gap: 16px;
+    padding: 20px;
+    transition: 0.2s all linear;
+    text-align: center;
+  }
+  .navbar a:hover {
+    color: red;
+    border-bottom: 2px solid red;
+  }
+  .navbar a::after {
+    display: none;
+  }
+}
